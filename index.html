@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title> Reconocimiento de caracteres - Perceptron</title>
+</head>
+<body>
+    <main>
+        <section id="matriz-entrada">
+        
+        </section>
+        <section class="container-buttons">
+            <button onclick="entrenar()"> Entrenar </button>
+            <button onclick="evaluar()"> Evaluar </button>
+        </section>
+
+        <section>
+            <h1> La letra es: <span id="letter"> </span></h1>
+        </section>
+    </main>
+    
+
+    <script src="data/data-train.js"></script>
+    <script src="js/pintar.js"></script>
+    <script src="js/perceptron.js"></script>
+</body>
+</html>
