@@ -35,7 +35,7 @@ const trainingDataList = data; // Data de entrenamiento
 const activationFunc = (y_in, tetta = 0) => {
     if (y_in > tetta) {
         return 1
-    } else if (-tetta <= y_in && y_in <= tetta) {
+    } else if (tetta >= y_in && y_in >= -tetta) {
         return 0
     } else if (y_in < -tetta) {
         return -1
@@ -46,14 +46,11 @@ const activationFunc = (y_in, tetta = 0) => {
 const setWeight = (num) => {
     weights = []
     for (let i = 0; i < num; i++) {
-        // weights[i] = Array(64).fill(Math.random())
-        weights[i] = Array(64).fill(0)
+        weights[i] = Array(64).fill(Math.random())
+        // weights[i] = Array(64).fill(0)
     }
     return weights
 }
-
-// Calcular error
-// const calcError = (error, total) => (error / total) * 100
 
 // Inicializamos los pesos y biases en 0
 const arrWeights = setWeight(7)
@@ -91,7 +88,7 @@ const entrenar = () => {
                 result += weight[63] // A la sumatoria se le suma el bias
 
                 // La funcion de activacion en este caso es la que determina el valor de y_in
-                if (activationFunc(result) != t) {
+                if (activationFunc(result) !== t) {
                     for (let pos = 0; pos < 63; pos++) {
                         weight[pos] += t * x[pos] // Actualizar el peso
                     }
@@ -112,6 +109,7 @@ const entrenar = () => {
 const evaluar = () => {
     output.length = 0
     arrEntrada.length = []
+
     for (let i of inputs) {
         i.checked ? arrEntrada.push(1) : arrEntrada.push(-1)
     }
@@ -121,9 +119,12 @@ const evaluar = () => {
         for(let j = 0; j < arrEntrada.length; j++){
             result +=  arrEntrada[j] * arrWeights[i][j];
         }
-
+        
+        console.log({result})
         let y = activationFunc(result);
         output.push(y)
     }
+    console.log(output)
+    console.log(weights)
     letter.innerHTML = outputs[output.indexOf(1).toString()]
 }
