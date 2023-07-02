@@ -120,11 +120,11 @@ const evaluar = () => {
             result +=  arrEntrada[j] * arrWeights[i][j];
         }
         
-        console.log({result})
+        // console.log({result})
         let y = activationFunc(result);
         output.push(y)
     }
-    console.log(output)
-    console.log(weights)
+    // console.log(output)
+    // console.log(weights)
     letter.innerHTML = outputs[output.indexOf(1).toString()]
 }
