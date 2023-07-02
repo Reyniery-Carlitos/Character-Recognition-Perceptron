@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
 }
 
-main{
-    padding: 2em;
+main {
+    padding: 1.5em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -21,10 +21,10 @@ main{
     width: 100%;
 }
 
-#matriz-entrada{
+#matriz-entrada {
     display: grid;
-    grid-template-columns: repeat(7, minmax(1.5em, 2.5em));
-    grid-template-rows: repeat(9, minmax(1.5em, 2.5em));
+    grid-template-columns: repeat(7, minmax(1.5em, 3.5em));
+    grid-template-rows: repeat(9, minmax(1.5em, 3.5em));
     align-items: center;
     justify-content: center;
     gap: 0.2em;
@@ -60,4 +60,14 @@ section .inputs[type=checkbox] {
 
 .container-buttons .btn-vaciar {
     background-color: orange;
+}
+
+@media only screen and (max-width: 720px) {
+    main {
+        flex-direction: column;
+    }
+
+    .container-buttons {
+        flex-direction: row;
+    }
 }
