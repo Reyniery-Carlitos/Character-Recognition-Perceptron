@@ -1,4 +1,5 @@
 const letter = document.getElementById('letter');
+const inputs = document.getElementsByClassName('inputs');
 
 // Data de entrenamiento
 const trainingDataList = data;
@@ -108,7 +109,6 @@ const cont = 0
 const evaluar = () => {
     output.length = 0
     arrEntrada.length = []
-    const inputs = document.getElementsByClassName('inputs');
     for (let i of inputs) {
         i.checked ? arrEntrada.push(1) : arrEntrada.push(-1)
     }

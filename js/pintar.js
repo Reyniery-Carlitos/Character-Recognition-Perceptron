@@ -7,3 +7,9 @@ for(let i = 0; i < entrada.length; i++){
         <input type='checkbox' class='inputs'>
     `
 }
+
+const vaciar = () => {
+    for(let i of inputs) {
+        i.checked = false;
+    }
+}

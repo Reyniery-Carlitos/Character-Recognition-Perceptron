@@ -57,3 +57,7 @@ section .inputs[type=checkbox] {
     height: 3em;
     width: 5em;
 }
+
+.container-buttons .btn-vaciar {
+    background-color: orange;
+}
