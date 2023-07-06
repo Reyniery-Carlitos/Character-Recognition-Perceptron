@@ -44,7 +44,7 @@ let epoch = 0 // Las epocas que se tarda el algoritmo en aprender
 const trainingDataList = data; // Data de entrenamiento
 
 // Funcion de activacion
-const activationFunc = (y_in, tetta = 1.2) => {
+const activationFunc = (y_in, tetta = 0) => {
     if (y_in > tetta) {
         return 1
     } else if (tetta >= y_in && y_in >= -tetta) {
