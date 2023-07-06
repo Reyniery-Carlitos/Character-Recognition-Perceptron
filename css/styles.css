@@ -9,15 +9,18 @@
 body {
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
+    color: #fff;
 }
 
 main {
-    padding: 1.5em;
+    align-items: center;
+    background-color: #17202A;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 2em;
+    justify-content: center;
+    max-height: 100vh;
+    padding: 1em;
     width: 100%;
 }
 
@@ -30,15 +33,30 @@ main {
     gap: 0.2em;
 }
 
-section .inputs[type=checkbox] {
+/* section .inputs[type=checkbox] {
+    appearance: none;
+    background-color: gray;
     height: 100%;
     border: none;
     outline-color: none;
 }
-
-.inputs[type=checkbox]:checked {
+*/
+/* 
+#matriz-entrada .inputs[type=text]: {
     background-color: red;
-    content: '.';
+
+} */
+
+#matriz-entrada .inputs {
+    background-color: #17202A;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+    height: 100%;
+    outline-color: none;
+    text-align: center;
 }
 
 .container-buttons {
@@ -50,12 +68,25 @@ section .inputs[type=checkbox] {
 }
 
 .container-buttons button {
-    background-color: rgb(0, 26, 255);
+    /* background-color: rgb(0, 26, 255); */
+    background-color: #566573;
     border: none;
     color: white;
     font-weight: bold;
     height: 3em;
     width: 5em;
+}
+
+#type-character {
+    background-color: #1C2833;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 3em;
+    outline: none;
+    text-align: center;
+    width: 100%;
 }
 
 .container-buttons .btn-vaciar {

@@ -8,17 +8,21 @@
 </head>
 <body>
     <main>
-        <section id="matriz-entrada">
-        
+        <section id="container-matriz-entrada">
+            <input type="text" minlength="1" maxlength="1" id="type-character" placeholder="Caracter a rellenar">
+            <form id="matriz-entrada">
+
+            </form>
         </section>
         <section class="container-buttons">
+
             <button onclick="entrenar()"> Entrenar </button>
             <button class="btn-vaciar" onclick="vaciar()"> Vaciar </button>
             <button onclick="evaluar()"> Evaluar </button>
         </section>
 
         <section>
-            <h1> La letra es: <span id="letter"> </span></h1>
+            <h1 id="letter"> </h1>
         </section>
     </main>
     
